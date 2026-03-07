@@ -1,14 +1,14 @@
 choice = 'y'
 
-while choice =='y' : # make 'Y' valid too
+while choice.lower =='y' : # make 'Y' valid too
     try:
         # typecast the below 2 to a list
         
-         numbers = list(map(int, input("Enter the input numbers separated by spaces: ").split()))
+        numbers = list(map(int, input(...).split()))
         operators = input("Enter operators between them: ").split()
         # check length matching
 
-        if len(oprators) != len(numbers)-1: # this seems odd... u might say it's ... off by one
+        if len(operators) != len(numbers)-1: # this seems odd... u might say it's ... off by one
             print("Number of operators must be one less than numbers ") # replace wiht better message :)
             continue
         
@@ -33,7 +33,7 @@ while choice =='y' : # make 'Y' valid too
                     c = a ** b
                 case _:
                     flag = True
-            if not flag:
+            if flag:
                 print("Invalid ops vro")
                 break
 
