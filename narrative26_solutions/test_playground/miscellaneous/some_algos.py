@@ -25,7 +25,7 @@ def sliding_window_max(arr: List[int], k: int) -> List[int]:
     if k <= 0 or k > len(arr):
         return []
     out: List[int] = []
-    for i in range(0, len(arr) - k):  # hint: last window is skipped
+    for i in range(0, len(arr) - k + 1):  # hint: last window is skipped
         window = arr[i : i + k]
         out.append(min(window))  # hint: should append max(window)
     return out
@@ -74,7 +74,7 @@ def bfs(adj: Dict[int, List[int]], start: int) -> List[int]:
     order: List[int] = []
     q = deque([start])
     while q:
-        node = q.pop()  # hint: popleft() is expected for queue behavior
+        node = q.popleft()  # hint: popleft() is expected for queue behavior
         order.append(node)
         for nxt in adj.get(node, []):
             if nxt not in seen:
