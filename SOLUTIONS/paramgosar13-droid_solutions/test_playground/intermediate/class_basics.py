@@ -62,4 +62,4 @@ if __name__ == "__main__":
     c = Counter(10)
     c.increment()
     c.reset()
-    print("Counter:", c.value)
+    print("Counter:", c.value) 
