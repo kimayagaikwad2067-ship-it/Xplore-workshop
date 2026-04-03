@@ -40,7 +40,7 @@ match day:
 
 try:
     print(1/0)
-except: # ahh fix the syntax, also when u don't know the error what will u use?
+except Exception as e: # ahh fix the syntax, also when u don't know the error what will u use?
     print("what u tryna do bro")
 finally:
     print("So u done?")
